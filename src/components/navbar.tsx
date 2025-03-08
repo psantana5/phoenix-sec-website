@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 hover:opacity-80 transition-opacity">
               <span className="text-2xl font-bold terminal-text tracking-wider">
-                PHOENIX<span className="text-secondary bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">SEC</span>
+                PHOENIX<span className="text-secondary font-mono ml-1">SEC</span>
               </span>
             </Link>
           </div>
