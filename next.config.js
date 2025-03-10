@@ -12,5 +12,10 @@ const nextConfig = {
       },
     ]
   },
+  // Add Vercel Speed Insights and Analytics configuration
+  analyticsId: process.env.NEXT_PUBLIC_ANALYTICS_ID,
+  speedInsights: {
+    enabled: true,
+  },
 }
 module.exports = nextConfig
