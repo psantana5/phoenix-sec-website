@@ -30,13 +30,29 @@ export default function Contact() {
     setIsSubmitting(true);
     setError('');
     
-    // Here you would typically send the form data to your backend
-    // For now, we'll simulate a successful submission after a delay
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send form data to the server
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formState,
+          recipient: 'admin@phoenix-sec.org'
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+      
       setIsSubmitted(true);
     } catch (err) {
       setError('There was an error submitting your message. Please try again.');
+      console.error('Contact form error:', err);
     } finally {
       setIsSubmitting(false);
     }
