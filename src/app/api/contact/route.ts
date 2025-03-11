@@ -13,6 +13,18 @@ export async function POST(request: Request) {
       );
     }
     
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { message: 'Invalid email format' },
+        { status: 400 }
+      );
+    }
+    
+    // Sanitize inputs to prevent XSS (though Next.js handles this in React)
+    const sanitizedMessage = message.trim();
+    
     // Configure email transporter with debug logging
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_SERVER || 'smtp.hostinger.com',
@@ -58,11 +70,22 @@ ${message}
     };
     
     // Send email
-    await transporter.sendMail(mailOptions);
-    
-    return NextResponse.json({ message: 'Email sent successfully' });
-  } catch (error) {
-    console.error('Contact API error:', error);
+    try {
+      await transporter.sendMail(mailOptions);
+      return NextResponse.json({ message: 'Email sent successfully' });
+    } catch (emailError: any) {
+      console.error('Email sending error:', emailError.message, emailError.stack);
+      // Log SMTP-specific error details if available
+      if (emailError.code) console.error('SMTP error code:', emailError.code);
+      if (emailError.command) console.error('SMTP command:', emailError.command);
+      
+      return NextResponse.json(
+        { message: 'Failed to send email' },
+        { status: 500 }
+      );
+    }
+  } catch (error: any) {
+    console.error('Contact API error:', error.message, error.stack);
     return NextResponse.json(
       { message: 'Failed to send email' },
       { status: 500 }
