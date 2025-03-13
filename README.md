@@ -1,36 +1,81 @@
+  Phoenix Security Website - README
+
+# Phoenix Security Website
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+Phoenix Security is a cybersecurity services website built with modern web technologies. The site showcases security services, company information, and cybersecurity resources in a professional, responsive interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+
+* **Framework**: Next.js 14 (React framework with server-side rendering)
+* **Language**: TypeScript
+* **Styling**: Tailwind CSS
+* **State Management**: React Context API
+* **Animations**: Framer Motion
+* **Deployment**: Vercel
+
+## Project Structure
+
+phoenix-sec-website/ ├── app/ # Next.js app directory (new App Router) │ ├── about/ # About page │ ├── services/ # Services page │ ├── contact/ # Contact page │ ├── blog/ # Blog section │ ├── layout.tsx # Root layout component │ └── page.tsx # Homepage component ├── components/ # Reusable UI components ├── public/ # Static assets (images, fonts) ├── styles/ # Global styles and Tailwind config ├── lib/ # Utility functions and shared logic └── types/ # TypeScript type definitions
+
+Then, run the development server:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+## Features
+
+**Responsive Design**: Mobile-first approach ensuring compatibility across all devices
+
+**Dark Mode**: Built-in dark mode toggle with system preference detection
+
+**SEO Optimized**: Meta tags and structured data for better search engine visibility
+
+**Performance Focused**: Optimized images, code splitting, and minimal dependencies
+
+**Accessibility**: WCAG compliant with keyboard navigation and screen reader support
+
+## Available Scripts
+
+* `npm run dev` - Start development server
+* `npm run build` - Build for production
+* `npm run start` - Start production server
+* `npm run lint` - Run ESLint
+* `npm run test` - Run tests
+
+## Customization
+
+This project uses `next/font` to automatically optimize and load Geist, a custom font family.
+
+Tailwind CSS can be configured in the `tailwind.config.js` file to match your brand colors and design preferences.
 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Next.js Documentation - learn about Next.js features and API.
+* Learn Next.js - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can check out the Next.js GitHub repository - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our Next.js deployment documentation for more details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
