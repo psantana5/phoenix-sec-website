@@ -111,7 +111,7 @@ export default function About() {
                   <a href="https://www.linkedin.com/in/jan-carandell-pi-84ab21265/" className="text-secondary hover:text-white transition-colors">
                     <FiLinkedin size={24} />
                   </a>
-                  <a href="#" className="text-secondary hover:text-white transition-colors">
+                  <a href="https://github.com/jansession05" className="text-secondary hover:text-white transition-colors">
                     <FiGithub size={24} />
                   </a>
                 </div>
