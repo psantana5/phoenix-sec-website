@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/navbar';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi';
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
 
 export default function About() {
   return (
@@ -113,9 +113,6 @@ export default function About() {
                   </a>
                   <a href="#" className="text-secondary hover:text-white transition-colors">
                     <FiGithub size={24} />
-                  </a>
-                  <a href="#" className="text-secondary hover:text-white transition-colors">
-                    <FiTwitter size={24} />
                   </a>
                 </div>
               </div>
