@@ -99,15 +99,15 @@ export default function Contact() {
                   <ContactInfoItem 
                     icon={<FiMail />}
                     title="Email"
-                    content="info@phoenix-security.com"
-                    link="mailto:info@phoenix-security.com"
+                    content="info@phoenix-sec.org"
+                    link="mailto:info@phoenix-sec.org"
                   />
                   
                   <ContactInfoItem 
                     icon={<FiPhone />}
                     title="Phone"
-                    content="+34 123 456 789"
-                    link="tel:+34123456789"
+                    content="+34 623 175 017"
+                    link="tel:+34 623 175 017"
                   />
                   
                   <ContactInfoItem 
