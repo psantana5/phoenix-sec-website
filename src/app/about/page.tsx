@@ -108,7 +108,7 @@ export default function About() {
                 </p>
                 
                 <div className="flex space-x-4 pt-2">
-                  <a href="#" className="text-secondary hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/in/jan-carandell-pi-84ab21265/" className="text-secondary hover:text-white transition-colors">
                     <FiLinkedin size={24} />
                   </a>
                   <a href="#" className="text-secondary hover:text-white transition-colors">
