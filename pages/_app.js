@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   // Track page views and user navigation
   useEffect(() => {
     const handleRouteChange = (url) => {
-      nm      // Track page views
+      // Track page views (fixed the "nm" typo)
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
         page_path: url,
       });
