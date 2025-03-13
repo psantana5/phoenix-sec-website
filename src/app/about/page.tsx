@@ -13,7 +13,7 @@ export default function About() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mt-20"> {/* Añadido mt-24 para mover el texto hacia abajo */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function About() {
       </section>
       
       {/* Team Section */}
-      <section className="py-16 px-4 bg-dark-300">
+      <section className="-mt-20 px-4 bg-dark-300">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 text-center terminal-text">Our Team</h2>
           
