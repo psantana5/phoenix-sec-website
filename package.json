@@ -15,7 +15,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "flags": "^3.1.1",
     "framer-motion": "^12.4.10",
-    "next": "15.2.1",
+    "next": "^15.2.2",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
