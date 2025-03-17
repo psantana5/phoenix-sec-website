@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/navbar';
 import Link from 'next/link';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck } from 'react-icons/fi';
+<script defer data-domain="phoenix-sec.org" src="https://plausible.io/js/script.js"></script>
 
 export default function Contact() {
   const [formState, setFormState] = useState({

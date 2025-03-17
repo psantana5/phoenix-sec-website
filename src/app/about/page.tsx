@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
+<script defer data-domain="phoenix-sec.org" src="https://plausible.io/js/script.js"></script>
 
 export default function About() {
   return (
