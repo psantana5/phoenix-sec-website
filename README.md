@@ -29,7 +29,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## Environment Variables
 
-Create a `.env.local` file in the root directory with the following variables:
+Create a `.env.local` file in the root directory if the project will be ran locally.
 
 ## Features
 
@@ -37,11 +37,11 @@ Create a `.env.local` file in the root directory with the following variables:
 
 **Dark Mode**: Built-in dark mode toggle with system preference detection
 
-**SEO Optimized**: Meta tags and structured data for better search engine visibility
+**SEO Optimized**: Meta tags and structured data for better search engine visibility (WIP)
 
-**Performance Focused**: Optimized images, code splitting, and minimal dependencies
+**Performance Focused**: Optimized images, code splitting, and minimal dependencies (WIP)
 
-**Accessibility**: WCAG compliant with keyboard navigation and screen reader support
+**Accessibility**: WCAG compliant with keyboard navigation and screen reader support (WIP)
 
 ## Available Scripts
 
