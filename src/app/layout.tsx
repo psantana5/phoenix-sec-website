@@ -17,7 +17,13 @@ export const metadata: Metadata = {
   title: "Phoenix Security - Securing the Future, One Exploit at a Time",
   description: "A cutting-edge cybersecurity company specializing in penetration testing, incident response, cloud security, and training.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      {
+        url: "/favicon.png",
+        sizes: "1000x1000",
+        type: "image/png"
+      },
+    ],
   },
 };
 
