@@ -14,8 +14,6 @@ import {
   FiCloud 
 } from 'react-icons/fi';
 
-<script defer data-domain="phoenix-sec.org" src="https://plausible.io/js/script.js"></script>
-
 export default function Services() {
   return (
     <div className="min-h-screen bg-dark-400 cyber-grid">
