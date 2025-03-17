@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@flags-sdk/statsig": "^0.2.1",
     "@heroicons/react": "^2.2.0",
