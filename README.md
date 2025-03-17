@@ -1,4 +1,6 @@
-  Phoenix Security Website - README
+# Phoenix Security Website
+
+Welcome to the Phoenix Security Website repository! This project is a Next.js application that serves as the official website for Phoenix Security. The website is designed to showcase the company's services, provide information about our team, and offer resources for cybersecurity enthusiasts.
 
 # Phoenix Security Website
 
