@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -35,7 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <script defer data-domain="phoenix-sec.org" src="https://plausible.io/js/script.js"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -43,6 +43,31 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
         </ThemeProvider>
+        
+        {/* Plausible Analytics */}
+        <Script
+          strategy="afterInteractive"
+          data-domain="phoenix-sec.org"
+          src="https://plausible.io/js/script.js"
+        />
+        
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-WLS509JKBY"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-WLS509JKBY');
+            `,
+          }}
+        />
       </body>
     </html>
   );
