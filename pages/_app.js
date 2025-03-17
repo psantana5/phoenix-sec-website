@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const handleRouteChange = (url) => {
       // Track page views (fixed the "nm" typo)
-      window.gtag('config', 'G-WLS509JKBY', {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
         page_path: url,
       });
 
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       {/* Google Analytics Script */}
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-WLS509JKBY`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
       />
       <Script
         id="google-analytics"
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-WLS509JKBY');
+            gtag('config', process.env.NEXT_PUBLIC_GA_ID);
           `,
         }}
       />
