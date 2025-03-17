@@ -16,7 +16,7 @@
     "cookies-next": "^5.1.0",
     "flags": "^3.1.1",
     "framer-motion": "^12.4.10",
-    "next": "15.2.1",
+    "next": "^15.2.2",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -26,14 +26,14 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.17.24",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "tailwindcss": "^4",
-    "typescript": "^5",
+    "typescript": "^5.8.2",
     "webpack-cli": "^4.0.0"
   }
 }
