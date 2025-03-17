@@ -21,7 +21,7 @@ export default function Services() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mt-20">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function Services() {
       </section>
       
       {/* Main Services Section */}
-      <section className="py-16 px-4 bg-dark-300">
+      <section className="-my-20 px-4 bg-dark-300">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 text-center terminal-text">Core Services</h2>
           
@@ -113,7 +113,7 @@ export default function Services() {
       </section>
       
       {/* Specialized Services */}
-      <section className="py-20 px-4 bg-dark-400">
+      <section className="py-30 px-4 bg-dark-400">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center terminal-text">Specialized Services</h2>
           
@@ -146,7 +146,7 @@ export default function Services() {
       </section>
       
       {/* Process Section */}
-      <section className="py-20 px-4 bg-dark-300">
+      <section className="-mt-15 px-4 bg-dark-300">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 text-center terminal-text">Our Process</h2>
           

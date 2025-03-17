@@ -64,7 +64,7 @@ export default function Contact() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mt-20">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function Contact() {
       </section>
       
       {/* Contact Section */}
-      <section className="py-16 px-4 bg-dark-300">
+      <section className="-mt-10 px-4 bg-dark-300">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Info */}
@@ -99,15 +99,15 @@ export default function Contact() {
                   <ContactInfoItem 
                     icon={<FiMail />}
                     title="Email"
-                    content="info@phoenix-security.com"
-                    link="mailto:info@phoenix-security.com"
+                    content="info@phoenix-sec.org"
+                    link="mailto:info@phoenix-sec.org"
                   />
                   
                   <ContactInfoItem 
                     icon={<FiPhone />}
                     title="Phone"
-                    content="+34 123 456 789"
-                    link="tel:+34123456789"
+                    content="+34 623 175 017"
+                    link="tel:+34 623 175 017"
                   />
                   
                   <ContactInfoItem 
