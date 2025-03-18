@@ -74,6 +74,26 @@ The easiest way to deploy your Next.js app is to use the Vercel Platform from th
 
 Check out our Next.js deployment documentation for more details.
 
+## Security Vulnerability Fixes
+
+The project had some security vulnerabilities in its dependencies that were addressed with the following steps:
+
+1. Identified vulnerabilities in uglify-js (<=2.5.0) which was a dependency of both detective and script packages
+2. Removed the problematic packages that weren't essential to the project:
+
+   ```bash
+   npm uninstall script detective --save
+    ```
+
+   ```
+3. Ran a final audit to verify the fixes:
+
+   ```bash
+   npm audit
+    ```
+
+If you encounter similar security warnings after updating dependencies, you may need to repeat these steps or add specific package overrides in package.json.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
