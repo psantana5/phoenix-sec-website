@@ -1,0 +1,52 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Upload production-ready build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: .next/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: build
+        path: .next/
+
+  # We do not want this to deploy to production as it is in Vercel.
+  # - name: Deploy to production
+  #    run: |
+  #     rsync -avz .next/ user@yourserver:/path/to/deploy
