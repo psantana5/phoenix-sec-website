@@ -424,7 +424,7 @@ function ResearchPaperCard({ title, date, abstract, tags, link, index, isExpande
                 </span>
               ))}
             </div>
-            <a href={link} className="text-secondary hover:text-secondary-light flex items-center gap-2 transition-colors">
+            <a href="/paper-ad-pt" className="text-secondary hover:text-secondary-light flex items-center gap-2 transition-colors">
               Read Paper <FiExternalLink />
             </a>
           </motion.div>
