@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "vercel-build": "rm -rf node_modules package-lock.json && npm install && next build",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
