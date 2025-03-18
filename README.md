@@ -1,4 +1,6 @@
-  Phoenix Security Website - README
+# Phoenix Security Website
+
+Welcome to the Phoenix Security Website repository! This project is a Next.js application that serves as the official website for Phoenix Security. The website is designed to showcase the company's services, provide information about our team, and offer resources for cybersecurity enthusiasts.
 
 # Phoenix Security Website
 
@@ -71,6 +73,26 @@ You can check out the Next.js GitHub repository - your feedback and contribution
 The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
 
 Check out our Next.js deployment documentation for more details.
+
+## Security Vulnerability Fixes
+
+The project had some security vulnerabilities in its dependencies that were addressed with the following steps:
+
+1. Identified vulnerabilities in uglify-js (<=2.5.0) which was a dependency of both detective and script packages
+2. Removed the problematic packages that weren't essential to the project:
+
+   ```bash
+   npm uninstall script detective --save
+    ```
+
+   ```
+3. Ran a final audit to verify the fixes:
+
+   ```bash
+   npm audit
+    ```
+
+If you encounter similar security warnings after updating dependencies, you may need to repeat these steps or add specific package overrides in package.json.
 
 ## Contributing
 
