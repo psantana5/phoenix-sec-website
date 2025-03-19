@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const GA_TRACKING_ID = "G-WLS509JKBY"; // Tu ID de seguimiento
+const GA_TRACKING_ID = "G-WLS509JKBY"; 
 
 const sendPageView = (url) => {
   if (window.gtag) {
