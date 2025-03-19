@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+// Import the client component wrapper instead of using dynamic directly
+import CookieConsentWrapper from "@/components/CookieConsentWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,29 +44,29 @@ export default function RootLayout({
       >
         <ThemeProvider>
           {children}
+          <CookieConsentWrapper />
         </ThemeProvider>
-        
-        {/* Plausible Analytics */}
+        {/* Google Analytics - Only loads if user consented to analytics */}
         <Script
-          strategy="afterInteractive"
-          data-domain="phoenix-sec.org"
-          src="https://plausible.io/js/script.js"
-        />
-        
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        />
-        <Script
-          id="google-analytics"
+          id="google-analytics-loader"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              (function() {
+                const consent = document.cookie.split('; ').find(row => row.startsWith('cookie-consent='));
+                const analyticsConsent = document.cookie.split('; ').find(row => row.startsWith('analytics-consent='));
+                if (consent && consent.includes('all') && analyticsConsent && analyticsConsent.includes('yes')) {
+                  const script = document.createElement('script');
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}';
+                  script.async = true;
+                  document.head.appendChild(script);
+                  
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                }
+              })();
             `,
           }}
         />
