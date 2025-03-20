@@ -36,32 +36,43 @@ const CookieConsent = () => {
     if (!showBanner) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-dark-400 text-white p-6 z-50 border-t border-primary/20">
-            <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className={`
+            fixed bottom-4 left-4 right-4 
+            bg-gray-100/10
+            backdrop-blur-lg
+            border border-gray-200/10 
+            p-6 
+            rounded-xl
+            shadow-2xl
+            ${showBanner ? 'block' : 'hidden'}
+        `}>
+            <div className="container mx-auto max-w-7xl">
+                <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
                     <div className="mb-6 md:mb-0 max-w-2xl">
-                        <h3 className="text-lg font-bold mb-2 terminal-text">Cookie Preferences</h3>
-                        <p className="text-sm text-gray-300">
+                        <h3 className="text-xl font-bold mb-3 terminal-text bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                            Cookie Preferences
+                        </h3>
+                        <p className="text-sm text-gray-300/90 leading-relaxed">
                             We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
                             Please select your cookie preferences below.
                         </p>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col sm:flex-row gap-4">
                         <button
                             onClick={rejectAll}
-                            className="px-4 py-2 text-sm bg-dark-300 hover:bg-dark-500 rounded border border-primary/20 transition-colors"
+                            className="px-6 py-2.5 text-sm bg-dark-300/50 hover:bg-dark-500/50 rounded-lg border border-primary/20 transition-all duration-300 hover:scale-105"
                         >
                             Reject All
                         </button>
                         <button
                             onClick={acceptNecessary}
-                            className="px-4 py-2 text-sm bg-dark-300 hover:bg-dark-500 rounded border border-secondary/20 transition-colors"
+                            className="px-6 py-2.5 text-sm bg-dark-300/50 hover:bg-dark-500/50 rounded-lg border border-secondary/20 transition-all duration-300 hover:scale-105"
                         >
                             Necessary Only
                         </button>
                         <button
                             onClick={acceptAll}
-                            className="px-4 py-2 text-sm neon-button hover:bg-primary/90 transition-all"
+                            className="px-6 py-2.5 text-sm neon-button hover:bg-primary/90 rounded-lg transition-all duration-300 hover:scale-105"
                         >
                             Accept All
                         </button>

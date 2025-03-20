@@ -56,6 +56,14 @@ export default function ReadPaper() {
               <h3 className="text-xl font-semibold text-white mb-4">Lateral Movement</h3>
               <p className="text-gray-400">Techniques used to move through a network once an attacker gains initial access.</p>
             </div>
+            <div className="bg-dark-400 p-6 rounded-lg hover:bg-primary/90 transition-all">
+              <h3 className="text-xl font-semibold text-white mb-4">Privilege Escalation</h3>
+              <p className="text-gray-400">Techniques to gain higher-level permissions from a lower-privileged account.</p>
+            </div>
+            <div className="bg-dark-400 p-6 rounded-lg hover:bg-primary/90 transition-all">
+              <h3 className="text-xl font-semibold text-white mb-4">Domain Controllers</h3>
+              <p className="text-gray-400">Central servers that manage security and authentication in AD environments.</p>
+            </div>
           </motion.div>
         </div>
       </section>
