@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://phoenix-security.com/sitemap.xml
