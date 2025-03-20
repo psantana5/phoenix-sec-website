@@ -84,8 +84,6 @@ The project had some security vulnerabilities in its dependencies that were addr
    ```bash
    npm uninstall script detective --save
     ```
-
-   ```
 3. Ran a final audit to verify the fixes:
 
    ```bash
