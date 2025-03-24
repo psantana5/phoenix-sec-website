@@ -12,7 +12,7 @@ export default function SEO({
   title = "Phoenix Security - Advanced Cybersecurity Solutions",
   description = "Phoenix Security provides cutting-edge cybersecurity solutions, penetration testing, and security consulting services. Protect your digital assets with industry-leading expertise.",
   keywords = "cybersecurity, penetration testing, security consulting, network security, Phoenix Security, cyber defense",
-  ogImage = "/images/phoenix-security-og.jpg",
+  ogImage = "/favicon.png",
   canonical
 }: SEOProps) {
   const siteUrl = "https://phoenix-sec.org";
@@ -46,8 +46,7 @@ export default function SEO({
       <meta name="author" content="Phoenix Security" />
       
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" href="/favicon.png" />
       
       {/* Schema.org markup */}
       <script type="application/ld+json">
