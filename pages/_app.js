@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 // Add this import
 import CookieConsent from '../components/CookieConsent';
+import SEO from '../components/SEO';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -30,13 +31,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <SEO />
       <Component {...pageProps} />
-      <Analytics
-        mode="production"
-        debug={process.env.NODE_ENV === 'development'}
-      />
-      <SpeedInsights />
-      <CookieConsent />
     </>
   );
 }
